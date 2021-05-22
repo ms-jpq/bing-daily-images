@@ -12,7 +12,7 @@ version: "3.8"
 services:
   bing:
     restart: always
-    image: msjpq/bing-daily-images
+    image: msjpq/bing-daily-images:latest
     environment:
       - TZ
     volumes:
