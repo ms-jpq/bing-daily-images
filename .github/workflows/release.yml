@@ -23,5 +23,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ secrets.DOCKER_USERNAME }}/bing-daily-images
           tags: latest
-          path: ./docker
-          Dockerfile: ./docker/Dockerfile
+          path: .
+          Dockerfile: ./Dockerfile
