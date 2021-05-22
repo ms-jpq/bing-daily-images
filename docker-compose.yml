@@ -6,4 +6,6 @@ services:
     build: .
     environment:
       - TZ
+    volumes:
+      - ./tmp:/data
 

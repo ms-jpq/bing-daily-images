@@ -58,6 +58,8 @@ def main() -> None:
     base_path = Path(args.out).resolve()
     images = _bing(args.days)
 
+    base_path.mkdir(parents=True, exist_ok=True)
+
     candidates = (
         (uri, filename)
         for uri, filename in images
