@@ -32,3 +32,6 @@ jobs:
       - name: Lint
         run: ./lint.sh
 
+      - name: Run
+        run: ./bing/bing.py --out . --days 14
+
