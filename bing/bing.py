@@ -34,10 +34,10 @@ def _bing(count: int) -> Iterable[Tuple[str, Path]]:
     res = _fetch(uri)
     hist = loads(res.decode())
 
-    for partial in hist["images"]:
-        uri = f"https://www.bing.com/{partial['url']}"
-        title = partial["title"]
-        date = datetime.strptime(partial["startdate"], "%Y%m%d")
+    for img in hist["images"]:
+        uri = f"https://www.bing.com/{img['url']}"
+        title = img["title"]
+        date = datetime.strptime(img["startdate"], "%Y%m%d")
         formatted_date = date.strftime("%Y_%m_%d")
         query = urlparse(uri).query
         file_name = parse_qs(query)["id"][0]
