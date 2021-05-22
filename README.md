@@ -13,6 +13,7 @@ services:
   bing:
     restart: always
     image: msjpq/bing-daily-images:latest
+    user: ${USER}
     environment:
       - TZ
     volumes:
